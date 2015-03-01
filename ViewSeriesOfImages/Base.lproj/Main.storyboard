@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Q8l-Qg-Kir">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Image-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="View Image" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="378-7e-mTV">
+                                <rect key="frame" x="-13" y="-20" width="441" height="736"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="378-7e-mTV" secondAttribute="height" multiplier="441:736" id="SE8-K1-nJG"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="1v8-ba-ETw" appends="YES" id="C9K-u5-Ere"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="378-7e-mTV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-20" id="HOD-HT-i1c"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="378-7e-mTV" secondAttribute="trailing" constant="-30" id="HRT-3N-TX6"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="378-7e-mTV" secondAttribute="bottom" constant="20" id="Qbo-J5-gfb"/>
+                            <constraint firstItem="378-7e-mTV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-29" id="tI4-6A-t1T"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem title="Animated View" id="5Db-HC-GJd"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="View Image" id="2KR-Dw-OMI">
+                        <barButtonItem key="rightBarButtonItem" title="Animated" style="done" id="9xq-AW-Vlf">
+                            <connections>
+                                <segue destination="IKM-6s-BgJ" kind="show" id="DSo-Mc-Z14"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="mainImagView" destination="378-7e-mTV" id="bQ2-XL-OQF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="1v8-ba-ETw">
+                    <connections>
+                        <action selector="swipedRight:" destination="BYZ-38-t0r" id="dhI-Ch-1d4"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-242" y="-201"/>
+        </scene>
+        <!--Animated Image-->
+        <scene sceneID="bE4-tU-hmU">
+            <objects>
+                <viewController title="Animated Image" id="IKM-6s-BgJ" customClass="AnimatedViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZSi-ng-6cX"/>
+                        <viewControllerLayoutGuide type="bottom" id="5tl-2b-t2G"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="C5y-Tt-7QG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jFB-si-3Vp">
+                                <rect key="frame" x="0.0" y="64" width="414" height="628"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="jFB-si-3Vp" secondAttribute="height" multiplier="207:314" id="U7I-wJ-9mZ"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jFB-si-3Vp" firstAttribute="leading" secondItem="C5y-Tt-7QG" secondAttribute="leadingMargin" constant="-16" id="0tx-3H-ke4"/>
+                            <constraint firstItem="5tl-2b-t2G" firstAttribute="top" secondItem="jFB-si-3Vp" secondAttribute="bottom" id="Msr-L6-Z9V"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jFB-si-3Vp" secondAttribute="trailing" constant="-16" id="WMD-Vh-55z"/>
+                            <constraint firstItem="jFB-si-3Vp" firstAttribute="top" secondItem="ZSi-ng-6cX" secondAttribute="bottom" id="qe0-Za-LRu"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Animated Image" id="KsI-51-Jdl"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="bugsImageView" destination="jFB-si-3Vp" id="C6C-OR-s55"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Gg-89-yiM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="337" y="-201"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Drv-91-szV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Q8l-Qg-Kir" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="pYo-mx-1hM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="0.0"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="PSy-2M-lhA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g3r-63-2QH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-796" y="-201"/>
+        </scene>
+    </scenes>
+</document>
