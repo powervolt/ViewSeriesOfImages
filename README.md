@@ -1,3 +1,3 @@
 # ViewSeriesOfImages
 
-Let you swipe through series of images. 
+Lets you swipe through series of images. 
